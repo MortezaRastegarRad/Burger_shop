@@ -1,5 +1,5 @@
 import React from "react";
-import Aux from "../../hoc/Aux";
+import Aux from "../../hoc/Aux_Children";
 import Button from "../UI/Button/Button";
 
 class OrderSummery extends React.Component {
