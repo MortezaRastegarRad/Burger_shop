@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="52496055-d4b7-4adc-b6cd-d921b234c0b8" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1Vn0XSvQYBhTb8byUZNRjzinOxW" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/Navigation" />
+      <recent name="$PROJECT_DIR$/src/components/UI" />
+      <recent name="$PROJECT_DIR$/src/components/Burger" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/Navigation/SideDrawer" />
+      <recent name="$PROJECT_DIR$/src/assets/images" />
+      <recent name="$PROJECT_DIR$/src/components/UI" />
+    </key>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="52496055-d4b7-4adc-b6cd-d921b234c0b8" name="Default Changelist" comment="" />
+      <created>1577873590201</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1577873590201</updated>
+      <workItem from="1577873592015" duration="20361000" />
+      <workItem from="1577960463091" duration="14518000" />
+      <workItem from="1578038034468" duration="22304000" />
+      <workItem from="1578124396193" duration="17463000" />
+      <workItem from="1578207561945" duration="1954000" />
+      <workItem from="1579853503690" duration="973000" />
+      <workItem from="1579854807009" duration="63000" />
+      <workItem from="1579854899408" duration="1790000" />
+      <workItem from="1579856714213" duration="1787000" />
+      <workItem from="1579858526607" duration="1392000" />
+      <workItem from="1579862551785" duration="1710000" />
+      <workItem from="1579864384715" duration="796000" />
+      <workItem from="1579870265192" duration="642000" />
+      <workItem from="1579873759504" duration="1167000" />
+      <workItem from="1580118215449" duration="602000" />
+      <workItem from="1580627342114" duration="1123000" />
+      <workItem from="1580740898070" duration="1777000" />
+      <workItem from="1580742698724" duration="1287000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="311" y="59" width="800" height="684" key="#ESLint" timestamp="1577873622668">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state x="311" y="59" width="800" height="684" key="#ESLint/67.27.1299.741@67.27.1299.741" timestamp="1577873622668" />
+    <state x="278" y="59" width="800" height="684" key="#Inspections" timestamp="1580742241841">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="278" y="59" width="800" height="684" key="#Inspections/0.27.1366.741@0.27.1366.741" timestamp="1580742241841" />
+    <state x="386" y="189" width="650" height="423" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1577878961955">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state x="386" y="189" width="650" height="423" key="#com.intellij.fileTypes.FileTypeChooser/67.27.1299.741@67.27.1299.741" timestamp="1577878961955" />
+    <state x="399" y="125" width="624" height="551" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1579854852195">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state x="399" y="125" width="624" height="551" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/67.27.1299.741@67.27.1299.741" timestamp="1579854852195" />
+    <state x="499" y="155" width="424" height="491" key="FileChooserDialogImpl" timestamp="1578225002122">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state x="499" y="155" width="424" height="491" key="FileChooserDialogImpl/67.27.1299.741@67.27.1299.741" timestamp="1578225002122" />
+    <state x="379" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1578065708873">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state x="379" y="89" width="672" height="678" key="search.everywhere.popup/67.27.1299.741@67.27.1299.741" timestamp="1578065708873" />
+    <state x="441" y="304" width="540" height="193" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1578065460210">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state x="441" y="304" width="540" height="193" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/67.27.1299.741@67.27.1299.741" timestamp="1578065460210" />
+  </component>
+</project>
