@@ -1,4 +1,5 @@
 import React from "react";
+import {Route} from 'react-router-dom';
 
 import Aux from '../../hoc/Aux_Children';
 import Burger from '../../components/Burger/Burger'
@@ -8,6 +9,8 @@ import OrderSummery from "../../components/OrderSummery/OrderSummery";
 import axios from '../../axios-orders';
 import Spinners from "../../components/UI/Spinners/Spinners";
 import withErrorHandler from "../../hoc/withErrorHandler/withErrorHandler";
+
+import ContactData from "../Order/Contact/ContactData";
 
 const INGREDIENT_PRICE = {
     Bacon: 0.7,
@@ -40,13 +43,12 @@ class BurgerBuilder extends React.Component {
     componentDidMount() {
         axios.get("get_order/")
             .then(response => {
-                console.log(response.data.data);
-                this.setState({ ingredients: response.data.data, count_purchase: response.data.reserved });
+                this.setState({ingredients: response.data.data, count_purchase: response.data.reserved});
                 this.Purchase(this.state.ingredients);
                 return response
             })
             .catch(error => {
-                this.setState({ error: true })
+                this.setState({error: true})
             });
     }
 
@@ -54,29 +56,29 @@ class BurgerBuilder extends React.Component {
         const sum = Object.keys(ingredients).map(igkey =>
             ingredients[igkey]
         ).reduce((sum, el) => sum + el, 0);
-        this.setState({ checkout: !(sum > 2) })
+        this.setState({checkout: !(sum > 2)})
     }
 
     addIngredient = (type) => { // اگر از ارو فانشن استفاده کنیم کلمهthis اشاره اش به خود کلس ولی اگه از نوع معمولی فانشن استفاده کنیم this به خود تابع اشاره میکنه و به ارور میخوریم
-        const instance = { ...this.state.ingredients };
+        const instance = {...this.state.ingredients};
         const oldCount = instance[type];
         instance[type] = oldCount + 1;
         const newPrice = this.state.totalPrice + INGREDIENT_PRICE[type];
-        this.setState({ ingredients: instance, totalPrice: newPrice });
+        this.setState({ingredients: instance, totalPrice: newPrice});
         this.Purchase(instance)
     };
 
-    purchasingHandler = () => (this.state.purchasing ? this.setState({ purchasing: false }) : this.setState({ purchasing: true }));
+    purchasingHandler = () => (this.state.purchasing ? this.setState({purchasing: false}) : this.setState({purchasing: true}));
 
     removeIngredient(type) {
-        const instance = { ...this.state.ingredients };
+        const instance = {...this.state.ingredients};
         const oldCount = instance[type];
         if (oldCount === 0) {
             return;
         }
         instance[type] = oldCount - 1;
         const newPrice = this.state.totalPrice - INGREDIENT_PRICE[type];
-        this.setState({ ingredients: instance, totalPrice: newPrice });
+        this.setState({ingredients: instance, totalPrice: newPrice});
         this.Purchase(instance);
     }
 
@@ -102,9 +104,18 @@ class BurgerBuilder extends React.Component {
         //         this.setState({ loading: false, purchasing: false });
         //         console.log(error)
         //     });
-        this.props.history.push('/checkout')
-    };
+        // this.props.history.replace('/checkout/contact-data');
+        let queryParams = [];
+        for (let i in this.state.ingredients) {
+            queryParams.push(encodeURIComponent(i) + '=' + encodeURIComponent(this.state.ingredients[i]))
+        }
 
+        let queryString = queryParams.join('&');
+        this.props.history.push({
+            pathname: '/checkout',
+            search: '?' + queryString,
+        });
+    };
 
     ChangeIngredient(event) {
         const ingredient = event.target.value;
@@ -120,7 +131,7 @@ class BurgerBuilder extends React.Component {
             ingredients.push(instance[0])
         }
         ingredients.push(bread_bottom);
-        this.setState({ ingredients: ingredients });
+        this.setState({ingredients: ingredients});
     }
 
     ClickIngredient(event) {
@@ -130,41 +141,41 @@ class BurgerBuilder extends React.Component {
         let ingredients = [...this.state.ingredients];
         const bread_bottom = ingredients.pop();
         if (Boolean) {
-            ingredients.push({ name: _name, number: 1 });
+            ingredients.push({name: _name, number: 1});
         } else {
             ingredients = ingredients.filter(item => item.name !== ingredient);
         }
         ingredients.push(bread_bottom);
-        this.setState({ ingredients: ingredients });
+        this.setState({ingredients: ingredients});
     }
 
     render() {
-        const disableInfo = { ...this.state.ingredients };
+        const disableInfo = {...this.state.ingredients};
         for (let key in disableInfo) {
             disableInfo[key] = disableInfo[key] <= 0;
         }
 
         let order = null;
 
-        let burger = this.state.error ? <p>fetching data went wrong</p> : <Spinners />
+        let burger = this.state.error ? <p>fetching data went wrong</p> : <Spinners/>;
         order = < OrderSummery ingredients={this.state.ingredients}
-            cancelButton={this.purchasingHandler}
-            continueButton={this.continueButton} />;
+                               cancelButton={this.purchasingHandler}
+                               continueButton={this.continueButton}/>;
 
         if (this.state.loading) {
-            order = <Spinners />
+            order = <Spinners/>
         }
 
         if (!(this.state.ingredients.Bacon === 0 && this.state.ingredients.Cheese === 0 && this.state.ingredients.Salad === 0 && this.state.ingredients.Meat === 0) || this.state.count_purchase === 0) {
             burger = (
                 <Aux>
-                    <Burger ingredients={this.state.ingredients} />
+                    <Burger ingredients={this.state.ingredients}/>
                     <BuildControler Click_More={this.addIngredient}
-                        Click_Less={this.removeIngredient.bind(this)}
-                        totalPrice={this.state.totalPrice}
-                        disableInfo={disableInfo}
-                        check_out={this.state.checkout}
-                        purchasing={this.purchasingHandler}
+                                    Click_Less={this.removeIngredient.bind(this)}
+                                    totalPrice={this.state.totalPrice}
+                                    disableInfo={disableInfo}
+                                    check_out={this.state.checkout}
+                                    purchasing={this.purchasingHandler}
                     />
                 </Aux>
             );
@@ -176,6 +187,7 @@ class BurgerBuilder extends React.Component {
                     {order}
                 </Modal>
                 {burger}
+                <Route path={"/checkout/contact-data"}  component={ContactData}/>
             </Aux>
         )
     }
